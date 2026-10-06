@@ -23,3 +23,7 @@ print(df["order_value_EUR"].describe())
 print("Median of order_value_EUR:", df["order_value_EUR"].median())
 print(df["cost"].describe())
 print("Median of cost:", df["cost"].median())
+print("\n")
+
+print(df.groupby("category")["order_value_EUR"].mean())
+
