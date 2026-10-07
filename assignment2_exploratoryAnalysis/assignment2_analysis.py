@@ -44,6 +44,13 @@ if avg_order >= threshold:
     print("The average order value meets the threshold.")
 else:
     print("The average order value is below the threshold.")
+print("\n")   
 
-
+print("Summary of Findings:")
+print("The dataset contains 1000 orders from 2019 to 2020, with no missing values.")
+print("The average order value is 113,361 EUR, and the median is 105,419 EUR.")
+print("The standard deviation of order values is 61,775 EUR, indicating moderate variation in order sizes.")
+print("Accessories has the highest average order value (134,398 EUR) among all categories.")
+print("The highest order value is 383,996.76 EUR, and the lowest is 15,100.57 EUR.")
+print("The average order value exceeds the 105,000 EUR threshold, indicating healthy order performance.")
 
