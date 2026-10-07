@@ -47,10 +47,17 @@ else:
 print("\n")   
 
 print("Summary of Findings:")
-print("The dataset contains 1000 orders from 2019 to 2020, with no missing values.")
-print("The average order value is 113,361 EUR, and the median is 105,419 EUR.")
-print("The standard deviation of order values is 61,775 EUR, indicating moderate variation in order sizes.")
-print("Accessories has the highest average order value (134,398 EUR) among all categories.")
-print("The highest order value is 383,996.76 EUR, and the lowest is 15,100.57 EUR.")
-print("The average order value exceeds the 105,000 EUR threshold, indicating healthy order performance.")
+print("The dataset contains 1000 orders from 2019 to 2020, and none of the columns have missing values, so the data is pretty clean.")
+print("On average, each order is worth about 113,361 EUR, with a median of 105,419 EUR.")
+print("The standard deviation is quite large which is 61,775 EUR, meaning order sizes vary a lot across the dataset.")
+print("Interestingly, Accessories stands out with the highest average order value, around 134,398 EUR per order.")
+print("The largest single order reached 383,996.76 EUR, while the smallest was only 15,100.57 EUR.")
+print("Overall, the average order value clears the 105,000 EUR threshold, so the business looks healthy.")
 
+print("\nData for Recommendations:")
+print("\n")
+print(df.groupby("country")["order_value_EUR"].sum())
+df["year"] = pd.to_datetime(df["date"], format="%m/%d/%Y").dt.year
+yearly = df.groupby("year")["order_value_EUR"].agg(["count", "sum", "mean"])
+print("\n")
+print(yearly.round(0))
