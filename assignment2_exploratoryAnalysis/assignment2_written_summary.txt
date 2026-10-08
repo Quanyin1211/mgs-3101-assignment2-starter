@@ -1,0 +1,44 @@
+Assignment 2: Exploratory Data Analysis - Written Summary
+
+-----------Data Overview-----------
+I used the coffee shop sales dataset from Assignment 1, 
+as suggested in the assignment instructions. 
+The dataset contains 1,000 orders from 2019 to 2020 with 10 columns, 
+including order_id, date, customer_name, country, category, device_type, 
+sales_manager, sales_rep, order_value_EUR, and cost. 
+It spans two years (2019 and 2020), with no missing values.
+
+-----------Data Quality-----------
+1. No missing values in any column so the data is clean and ready for analysis.
+2. The order_value_EUR and cost columns were stored with thousand separators 
+reading them with thousands="," kept them as proper numbers. Without it, 
+the values with commas would be read as text instead of numbers.
+3. Column names contained trailing spaces, which were removed with str.strip().
+4. Dates follow the M/D/YYYY format.
+5. For the descriptive statistics, I chose the two numeric columns order_value_EUR and cost. 
+These are the most useful and the only numeric fields in the dataset: order_value_EUR shows how much revenue each order brings, 
+while cost shows how much each order costs. Comparing them also lets us look at profit (revenue minus cost).
+
+-----------Findings-----------
+1. Accessories has the lowest order volume (35 orders) but the highest average order value (134,398 EUR) among all categories.
+2. Sales are concentrated in Portugal, France, and Sweden, which rank as the top three countries by total revenue.
+3. Order volume grew from 490 (2019) to 510 (2020), but the average order value fell from 115,546 to 111,263 EUR.
+
+-----------Recommendations-----------
+1. Accessories has the lowest order volume but the highest average order value. 
+This might be because most companies buy all their accessories in a single order, 
+leaving few repeat customers or individual buyers. 
+I would suggest expanding sales channels to attract more customers.
+2. Focus on deepening business in Portugal, France, and Sweden, since these three countries contribute the most to overall sales. 
+It makes sense to focus on key markets rather than spreading resources across all countries.
+3. From 2019 to 2020, order volume increased while the average order value declined. 
+Consider bundling or upselling to protect profits, or even grow them.
+
+-----------Questions-----------
+1. Does the high average order value in Accessories come from a small number of large business customers? 
+If so, the category's revenue could be at risk if any of these customers switch away.
+2. Are Portugal, France, and Sweden consistently strong across both years, or is their share driven by a few very large orders? 
+A downturn in any of these markets could significantly hurt total revenue.
+3. Is the decline in average order value caused by lower prices across all categories, 
+or by a shift in the sales mix toward cheaper categories? 
+This would show whether the profit decline is a pricing issue or a product mix issue.
