@@ -68,6 +68,10 @@ print("Total revenue by year:")
 print(df.groupby("year")["order_value_EUR"].sum())
 print("Average order value by year:")
 print(df.groupby("year")["order_value_EUR"].mean().round(0))
+df["profit"] = df["order_value_EUR"] - df["cost"]
+print("Total profit:", round(df["profit"].sum()))
+print("Average profit by year:")
+print(df.groupby("year")["profit"].mean().round(0))
 print("\n")
 
 print("Recommendations:")
