@@ -18,6 +18,8 @@ the values with commas would be read as text instead of numbers.
 5. For the descriptive statistics, I chose the two numeric columns order_value_EUR and cost. 
 These are the most useful and the only numeric fields in the dataset: order_value_EUR shows how much revenue each order brings, 
 while cost shows how much each order costs. Comparing them also lets us look at profit (revenue minus cost).
+6. I set the threshold at 105,000 EUR because it is slightly below the overall average order value (about 113,361 EUR) 
+and close to the median (about 105,419 EUR), so it works as a reasonable benchmark for a typical order.
 
 -----------Findings-----------
 1. Accessories has the lowest order volume (35 orders) but the highest average order value (134,398 EUR) among all categories.
@@ -32,6 +34,7 @@ I would suggest expanding sales channels to attract more customers.
 2. Focus on deepening business in Portugal, France, and Sweden, since these three countries contribute the most to overall sales. 
 It makes sense to focus on key markets rather than spreading resources across all countries.
 3. From 2019 to 2020, order volume increased while the average order value declined. 
+The average profit per order also fell from about 19,362 to 18,638 EUR. 
 Consider bundling or upselling to protect profits, or even grow them.
 
 -----------Questions-----------
